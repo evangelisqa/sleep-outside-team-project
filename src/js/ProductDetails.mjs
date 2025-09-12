@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+import { getLocalStorage, setLocalStorage } from './utils.mjs';
 
 export default class ProductDetails {
     constructor(productId, dataSource) {
@@ -10,9 +10,9 @@ export default class ProductDetails {
         document.getElementById('addToCart').addEventListener('click', this.addtoCart.bind(this));
     }
     addProductToCart() {
-        const cartItems = getLocalStorage("so-cart") || [];
+        const cartItems = getLocalStorage('so-cart') || [];
         cartItems.push(this.product);
-        setLocalStorage("so-cart", cartItems);
+        setLocalStorage('so-cart', cartItems);
     }
     renderProductDetails() {
         productDetailsTemplate(this.product);
