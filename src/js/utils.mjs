@@ -29,3 +29,15 @@ export function getParam(param) {
   const product = urlParams.get(param);
   return product;
 }
+
+// render an HTML list using a template string function
+export function renderListWithTemplate(templateFunction, parentElement, list, position = "afterbegin", clear = false) {
+  // generate the string array with the template function
+  const listStrings = list.map(templateFunction);
+  // clear out the parent element if desired
+  if (clear) {
+    parentElement.innerHTML = "";
+  }
+  // insert the string array into the desired position within the parent element
+  parentElement.insertAdjacentHTML(position, listStrings.join(""));
+}
