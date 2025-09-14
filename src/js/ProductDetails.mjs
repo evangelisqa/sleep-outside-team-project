@@ -7,7 +7,7 @@ export default class ProductDetails {
         this.dataSource = dataSource;
     }
     async init() {
-        document.getElementById('addToCart').addEventListener('click', this.addtoCart.bind(this));
+        document.getElementById('addToCart').addEventListener('click', this.addProductToCart.bind(this));
     }
     addProductToCart() {
         const cartItems = getLocalStorage('so-cart') || [];
