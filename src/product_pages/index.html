@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outdoor Gear Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul#product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .product-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #0077cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Explore Our Tents</h1>
+    <ul id="product-list"></ul>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
