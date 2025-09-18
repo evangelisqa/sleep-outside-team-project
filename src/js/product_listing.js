@@ -1,14 +1,3 @@
-import ProductData from './ProductData.mjs';
-import ProductList from './ProductList.mjs';
-
-
-const productData = new ProductData('tents');
-const productList = new ProductList(
-  'tents',
-  productData,
-  document.querySelector('.productList'),
-);
-
 
 const validTentIds = ['880RT', '985PR', '989CG'];
 
@@ -23,7 +12,7 @@ fetch('src/json/tents.json')
 
 
 function displayTents(tents) {
-  const container = document.getElementById('tent-list'); // Make sure this matches your HTML
+  const container = document.getElementById('tent-list'); 
 
   tents.forEach(tent => {
     const card = document.createElement('div');
