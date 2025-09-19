@@ -1,11 +1,14 @@
-function productCardTemplate() {
-  return `<li class="product-card">
-    <a href="product_pages/?product=">
+function productCardTemplate(product) {
+  return `<li class="cart-card divider">
+    <a href="product_pages/?product=" class="cart-card__image">
       <img src="" alt="Image of ">
-      <h2 class="card__brand"></h2>
-      <h3 class="card__name"></h3>
-      <p class="product-card__price">$</p>
     </a>
+    <a href="product-pages/?product=">
+        <h2 class="card__name"></h2>
+    </a>
+    <p class="cart-card__color"></p>
+    <p class="cart-card__quantity">qty: </p>
+    <p class="cart-card__price"></p>
   </li>`
 }
 
