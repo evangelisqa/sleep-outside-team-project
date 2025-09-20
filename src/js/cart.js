@@ -19,6 +19,9 @@ function renderCartContents() {
     });
     document.getElementById('total').innerHTML = `Total Price: $${totalPrice}`;
     
+  } else {
+    document.querySelector('.product-list').innerHTML =
+    '<h3>Your cart is empty</h3>';
   }
 }
 
