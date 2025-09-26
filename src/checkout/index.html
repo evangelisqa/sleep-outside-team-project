@@ -9,6 +9,7 @@
     <title>Sleep Outside | Checkout</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/checkout.js"></script>
   </head>
 
   <body>
@@ -59,6 +60,20 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <form id="checkoutForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required/>
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required/>
+
+          <label for="card" id="card">Card Number:</label>
+          <input type="text" id="card" name="card" required pattern="\d{16}"/>
+
+          <button type="submit">Place Order</button>
+        </form>
+
+        <div id="message" style="margin-top: 1em; font-weight: bold;"></div>
       </section>
     </main>
 
