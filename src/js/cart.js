@@ -4,24 +4,23 @@ loadHeaderFooter();
 
 function renderCartContents() {
   const cartItems = getLocalStorage('so-cart');
-  if(cartItems) {
+  if (cartItems) {
     const htmlItems = cartItems.map((item) => cartItemTemplate(item));
     document.querySelector('.product-list').innerHTML = htmlItems.join('');
     // Get the total and return it
     let totalPrice = 0;
-    let itemPrices = cartItems.map((item)=> {
+    let itemPrices = cartItems.map((item) => {
       let itemPrice = 0;
       itemPrice = itemPrice + item.ListPrice;
       return itemPrice;
     });
-    itemPrices.forEach(item => {
+    itemPrices.forEach((item) => {
       totalPrice += item;
     });
     document.getElementById('total').innerHTML = `Total Price: $${totalPrice}`;
-    
   } else {
     document.querySelector('.product-list').innerHTML =
-    '<h3>Your cart is empty</h3>';
+      '<h3>Your cart is empty</h3>';
   }
 }
 
