@@ -131,6 +131,17 @@ button {
   fill: gray;
 }
 
+@keyframes itemAdded {
+  0% {transform: rotate(90deg);}
+  50% {transform: rotate(-180deg);}
+  100% {transform: rotate(90deg);}
+}
+
+.cartAnimation {
+  animation-name: itemAdded;
+  animation-duration: 3s;
+}
+
 /* End cart icon styles */
 
 .mission {
