@@ -22,8 +22,12 @@ export default class ProductDetails {
 
   addProductToCart() {
     const cartItems = getLocalStorage('so-cart') || [];
+    const cartIcon = document.querySelector('.cart');
     cartItems.push(this.product);
     setLocalStorage('so-cart', cartItems);
+
+    cartIcon.classList.add('cartAnimation');
+    cartIcon.addEventListener('animationEnd', ()=> cartIcon.classList.remove('cartAnimation'));
   }
 
   renderProductDetails() {
